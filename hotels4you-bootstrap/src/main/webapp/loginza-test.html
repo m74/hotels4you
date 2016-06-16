@@ -1,0 +1,15 @@
+<html>
+<body>
+	<script type="text/javascript" src="http://loginza.ru/js/widget.js"></script>
+	<script type="text/javascript">
+		//
+    var arr = location.href.split('/');
+    arr.pop();
+    var url = arr.join('/') + '/loginza';
+    var providers = [ 'vkontakte', 'facebook', 'google', 'yandex', 'twitter', 'flickr' ];
+    var lang = "ru";
+    document.write('<iframe src="http://loginza.ru/api/widget?overlay=loginza&token_url=' + url + '&lang=' + lang + '&providers_set=' + providers.join(',')
+        + '" style="width:360px;height:200px;" scrolling="no" frameborder="no"></iframe>');
+	</script>
+</body>
+</html>

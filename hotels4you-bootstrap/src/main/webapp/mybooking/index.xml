@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xsl/default.xsl"?>
+
+<document>
+	<title>Мое бронирование</title>
+	<pathname>Мое бронирование</pathname>
+	<description></description>
+	
+	<script src="mybooking.js"/>
+	
+	<content>
+		<div id="main" class="container" />
+	</content>
+
+</document>

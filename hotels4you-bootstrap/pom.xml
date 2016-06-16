@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ru.com.m74.spring</groupId>
+        <artifactId>springweb-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>ru.com.m74.webapps</groupId>
+    <artifactId>hotels4you-bootstrap</artifactId>
+    <version>0.0.1</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <dom4j.version>1.6.1</dom4j.version>
+        <xalan.version>2.7.1</xalan.version>
+    </properties>
+    <dependencies>
+
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- Transform -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>xalan</artifactId>
+            <version>${xalan.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>serializer</artifactId>
+            <version>${xalan.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.mixam.libs</groupId>
+            <artifactId>app-server-transform</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <!-- Mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-core</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-entitymanager</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.hibernate</groupId>-->
+        <!--<artifactId>hibernate-c3p0</artifactId>-->
+        <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.sun.mail</groupId>-->
+        <!--<artifactId>javax.mail</artifactId>-->
+        <!--<version>1.5.4</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>ru.mixam.servlet</groupId>-->
+        <!--<artifactId>thumbnail-servlet</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>ru.mixam.libs</groupId>-->
+        <!--<artifactId>app-server-runtime</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>ru.mixam.h4y</groupId>-->
+        <!--<artifactId>h4y-persistence</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>ru.com.m74.appserver</groupId>-->
+        <!--<artifactId>app-server-action-wrapper</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>ru.mixam</groupId>-->
+        <!--<artifactId>loginza</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>

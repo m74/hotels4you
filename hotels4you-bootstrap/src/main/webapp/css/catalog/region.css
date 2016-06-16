@@ -1,0 +1,30 @@
+.hotel .price {
+	color: red;
+	font-size: 20pt;
+	height: 100px;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.hotel .buttons {
+	text-align: center;
+}
+
+.hotel h3 {
+	margin-top: 0;
+}
+
+.hotel .description {
+	height: 100px;
+	overflow: hidden;
+}
+
+.hotel .col {
+	margin-bottom: 20px;
+}
+
+.caption h3 {
+	height: 100px;
+	overflow: hidden;
+}

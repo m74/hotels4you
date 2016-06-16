@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="booking4u">
+	<display-name>booking4u.ru</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.xml</welcome-file>
+	</welcome-file-list>
+
+</web-app>

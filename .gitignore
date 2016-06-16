@@ -1,0 +1,10 @@
+.idea/
+*.iml
+*~
+target/
+.DS_Store
+.settings/
+.project
+.classpath
+/hotels4you-bootstrap/bower_components
+/hotels4you-bootstrap/backup

@@ -14,6 +14,10 @@
     <xsl:variable name="uri" select="/document/@uri"/>
     <xsl:variable name="pathInfo" select="/document/@pathInfo"/>
 
+    <xsl:template match="body">
+        <xsl:call-template name="content"/>
+    </xsl:template>
+
     <xsl:template match="/document">
         <xsl:text disable-output-escaping="yes"><![CDATA[<!DOCTYPE html>]]></xsl:text>
         <html lang="ru">
@@ -25,6 +29,7 @@
                 <xsl:call-template name="navbar"/>
                 <div id="messages"/>
                 <xsl:call-template name="path"/>
+                <xsl:apply-templates select="body"/>
                 <xsl:call-template name="content"/>
                 <xsl:call-template name="footer"/>
                 <xsl:call-template name="bag"/>

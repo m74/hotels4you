@@ -9,6 +9,16 @@ function msg(c) {
     new PNotify(c);
 }
 
+
+Array.prototype.contains = function (item) {
+    return this.indexOf(item) != -1;
+};
+
+String.prototype.contains = function (item) {
+    return this.indexOf(item) != -1;
+};
+
+
 // find contextPath
 var contextPath =
     (function (arr) {

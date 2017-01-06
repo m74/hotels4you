@@ -7,12 +7,12 @@
     <xsl:template match="region">
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <a href="/region/{id}/">
-                <xsl:value-of select="name_ru"/>
+                <xsl:value-of select="name"/>
             </a>
         </div>
     </xsl:template>
 
-    <xsl:template name="content">
+    <xsl:template match="body">
         <div class="container">
             <div class="row">
                 <xsl:apply-templates select="region"/>

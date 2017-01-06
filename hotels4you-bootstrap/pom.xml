@@ -110,16 +110,22 @@
             <version>${mysql.connector.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>3.4.2</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+        <!-- common utils -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>4.2.5.RELEASE</version>
         </dependency>
         <!--<dependency>-->
         <!--<groupId>org.hibernate</groupId>-->
@@ -169,6 +175,12 @@
         <!--<artifactId>loginza</artifactId>-->
         <!--<version>0.0.1</version>-->
         <!--</dependency>-->
+
+        <dependency>
+            <groupId>ru.mixam.servlet</groupId>
+            <artifactId>thumbnail-servlet</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -181,6 +193,5 @@
                 </configuration>
             </plugin>
         </plugins>
-
     </build>
 </project>

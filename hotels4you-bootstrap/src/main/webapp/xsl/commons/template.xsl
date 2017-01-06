@@ -14,8 +14,10 @@
     <xsl:variable name="uri" select="/document/@uri"/>
     <xsl:variable name="pathInfo" select="/document/@pathInfo"/>
 
+    <!--<xsl:template name="content"/>-->
+
     <xsl:template match="body">
-        <xsl:call-template name="content"/>
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="/document">
@@ -30,7 +32,6 @@
                 <div id="messages"/>
                 <xsl:call-template name="path"/>
                 <xsl:apply-templates select="body"/>
-                <xsl:call-template name="content"/>
                 <xsl:call-template name="footer"/>
                 <xsl:call-template name="bag"/>
                 <script src="{$cp}/js/jquery-2.1.4.min.js" type="text/javascript"/>
@@ -44,9 +45,9 @@
         </html>
     </xsl:template>
 
-    <xsl:template name="content">
-        <xsl:apply-templates select="content"/>
-    </xsl:template>
+    <!--<xsl:template name="content">-->
+    <!--<xsl:apply-templates select="content"/>-->
+    <!--</xsl:template>-->
 
     <xsl:template name="style">
         <xsl:apply-templates select="style"/>

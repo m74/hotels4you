@@ -14,7 +14,7 @@
 		<script type="text/javascript" src="{$cp}/js/regionsearch.js" />
 	</xsl:template>
 
-	<xsl:template name="content">
+	<xsl:template match="body">
 		<div class="container main">
 			<p>
 				<button type="button" class="btn btn-link">

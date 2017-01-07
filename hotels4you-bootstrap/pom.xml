@@ -127,6 +127,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
+
         <!--<dependency>-->
         <!--<groupId>org.hibernate</groupId>-->
         <!--<artifactId>hibernate-core</artifactId>-->
@@ -148,11 +149,6 @@
         <!--<version>1.5.4</version>-->
         <!--</dependency>-->
 
-        <!--<dependency>-->
-        <!--<groupId>ru.mixam.servlet</groupId>-->
-        <!--<artifactId>thumbnail-servlet</artifactId>-->
-        <!--<version>0.0.1</version>-->
-        <!--</dependency>-->
         <!--<dependency>-->
         <!--<groupId>ru.mixam.libs</groupId>-->
         <!--<artifactId>app-server-runtime</artifactId>-->
@@ -176,11 +172,17 @@
         <!--<version>0.0.1</version>-->
         <!--</dependency>-->
 
-        <dependency>
-            <groupId>ru.mixam.servlet</groupId>
-            <artifactId>thumbnail-servlet</artifactId>
-            <version>0.0.1</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>ru.mixam.servlet</groupId>-->
+        <!--<artifactId>thumbnail-servlet</artifactId>-->
+        <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>ru.mixam.libs</groupId>-->
+            <!--<artifactId>format-currency</artifactId>-->
+            <!--<version>0.0.1</version>-->
+        <!--</dependency>-->
     </dependencies>
     <build>
         <plugins>

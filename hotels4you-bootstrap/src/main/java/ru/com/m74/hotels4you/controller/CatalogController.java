@@ -104,6 +104,7 @@ public class CatalogController {
                         room.setDescription(rs1.getString("description"));
                         room.setIconUrl(
                                 Photo.getIconUrl(rs1.getString("iconId"), rs1.getString("iconType"), "320x240"));
+                        room.setPrice(0.0);
                         return room;
                     }, hotel.getId()));
 

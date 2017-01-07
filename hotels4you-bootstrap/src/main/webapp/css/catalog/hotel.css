@@ -1,11 +1,18 @@
 #hotel-photos {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .price {
-	color: red;
-	font-size: 20pt;
-	height: 100px;
-	padding: 20px;
-	width: 100%;
+    color: red;
+    font-size: 20pt;
+    height: 100px;
+    padding: 20px;
+    width: 100%;
+}
+
+.room-desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }

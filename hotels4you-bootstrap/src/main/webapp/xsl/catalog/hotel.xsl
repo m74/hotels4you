@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:fmt="http://xml.apache.org/xalan/java/ru.com.m74.hotels4you.utils.Format"
                 version="1.0">
     <xsl:import href="../commons/template.xsl"/>
 
@@ -101,13 +102,14 @@
                 <h5 style="margin-top: 0px;">
                     <xsl:value-of select="title"/>
                 </h5>
-                <p class="small" style="height: 55px; overflow: hidden;">
+                <p class="small room-desc">
                     <xsl:value-of select="description" disable-output-escaping="yes"/>
                 </p>
             </div>
             <div class="col-sm-3" style="text-align: center;">
                 <div class="price">
-                    <xsl:value-of select="price"/>
+                    <xsl:value-of select="fmt:currency(price)"/>
+                    <xsl:text> руб.</xsl:text>
                 </div>
                 <form>
                     <input type="hidden" name="room" value="{id}"/>

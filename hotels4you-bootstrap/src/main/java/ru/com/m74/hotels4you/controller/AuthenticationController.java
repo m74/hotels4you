@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import ru.com.m74.hotels4you.dto.HtmlDocument;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,5 +44,22 @@ public class AuthenticationController {
         // "{'uid':'100001186343932','identity':'http://www.facebook.com/profile.php?id=100001186343932','email':'mixam@h4y.ru','dob':'1974-01-01','name':{'first_name':'Максим','last_name':'Смирнов','full_name':'Максим
         // Смирнов'},'gender':'M','provider':'http://www.facebook.com/','photo':'https://graph.facebook.com/100001186343932/picture'}";
 
+    }
+
+    /**
+     * Форма авторизации
+     *
+     * @throws IOException
+     */
+    @RequestMapping(value = "/auth")
+    public HtmlDocument auth() throws IOException {
+        HtmlDocument document = new HtmlDocument();
+        document.setTitle("Вход / Авторизация");
+        document.setStylesheet("/xsl/auth.xsl");
+
+//        document.getBody().put("principal", principal);
+
+//        document.getBody().put("anonymous", principal.equals("anonymousUser"));
+        return document;
     }
 }

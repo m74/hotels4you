@@ -12,7 +12,15 @@
         <script type="text/javascript" src="{$cp}/js/loginza.js"/>
     </xsl:template>
 
-    <xsl:template match="body">
+    <xsl:template match="document[@anonymousUser='false']/body">
+        <div class="container">
+            <div class="row">
+                <a href="{$cp}/logout">Выход</a>
+            </div>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="document[@anonymousUser='true']/body">
         <div class="container">
             <xsl:choose>
                 <xsl:when test="session/user.id">

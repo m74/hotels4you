@@ -37,6 +37,27 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!--<dependency>-->
         <!--<groupId>org.springframework</groupId>-->
         <!--<artifactId>spring-oxm</artifactId>-->
@@ -179,9 +200,9 @@
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>ru.mixam.libs</groupId>-->
-            <!--<artifactId>format-currency</artifactId>-->
-            <!--<version>0.0.1</version>-->
+        <!--<groupId>ru.mixam.libs</groupId>-->
+        <!--<artifactId>format-currency</artifactId>-->
+        <!--<version>0.0.1</version>-->
         <!--</dependency>-->
     </dependencies>
     <build>

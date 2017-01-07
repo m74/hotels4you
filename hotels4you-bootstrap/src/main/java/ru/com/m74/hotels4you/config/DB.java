@@ -18,9 +18,10 @@ import java.io.IOException;
  * @since 06.01.17 1:35
  */
 @Configuration
+//@Order(5)
 public class DB {
 
-    @Bean(name = "dataSource")
+    @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(Driver.class.getName());
@@ -30,15 +31,15 @@ public class DB {
         return dataSource;
     }
 
-    @Bean(name = "vsrfJdbcTemplate")
+    @Bean
     @DependsOn(value = "dataSource")
-    public JdbcTemplate getJdbcTemplate() {
+    public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
 
-    @Bean(name = "vsrfNamedParameterJdbcTemplate")
+    @Bean
     @DependsOn(value = "dataSource")
-    public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() {
+    public NamedParameterJdbcTemplate namedParameterJdbcTemplate() {
         return new NamedParameterJdbcTemplate(dataSource());
     }
 
@@ -50,7 +51,7 @@ public class DB {
      */
     @Bean
     public SpringLiquibase migrations() throws IOException {
-        LoggerFactory.getLogger(getClass()).debug("process migrations");
+        LoggerFactory.getLogger("Configuration:DB").debug("process migrations");
 
         SpringLiquibase runner = new SpringLiquibase();
         runner.setDataSource(dataSource());

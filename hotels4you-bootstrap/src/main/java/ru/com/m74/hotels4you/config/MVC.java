@@ -32,6 +32,7 @@ import javax.xml.transform.URIResolver;
  * @since 15.06.16 23:58
  */
 @Configuration
+//@Order(1)
 @ComponentScan({"ru.com.m74.hotels4you.controller"})
 @EnableWebMvc
 public class MVC extends WebMvcConfigurerAdapter {

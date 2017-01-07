@@ -3,7 +3,6 @@ package ru.com.m74.hotels4you;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
@@ -40,6 +39,9 @@ public class Starter implements WebApplicationInitializer {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
 
+        servletContext
+                .addFilter("springSecurityFilterChain", org.springframework.web.filter.DelegatingFilterProxy.class)
+                .addMappingForUrlPatterns(null, false, "/*");
 //        servletContext.addFilter("charset", CharacterEncodingFilter.class).addMappingForUrlPatterns(null, false, "/*");
     }
 }

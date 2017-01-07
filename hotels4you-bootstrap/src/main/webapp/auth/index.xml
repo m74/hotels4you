@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="/xsl/auth.xsl"?>
 
 <document>
-	<title>Вход / Авторизация</title>
-	<pathname>Авторизация</pathname>
-	
+    <title>Вход / Авторизация</title>
+    <pathname>Авторизация</pathname>
 
+    <body/>
 </document>

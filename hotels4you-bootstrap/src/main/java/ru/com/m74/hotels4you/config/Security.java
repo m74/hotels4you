@@ -26,7 +26,7 @@ public class Security extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .regexMatchers("^/auth/.*", "^.*\\.(js|css)$").permitAll()
-                .antMatchers("/mybooking/**").authenticated()
+//                .antMatchers("/mybooking/**").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()

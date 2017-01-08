@@ -7,6 +7,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version="1.0">
     <xsl:output method="html" encoding="utf-8" indent="yes"/>
+    <!--<xsl:output method="html" encoding="utf-8" indent="no"/>-->
 
     <xsl:include href="html.xsl"/>
 
@@ -193,7 +194,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <li>
-                                    <a href="{$cp}/login">
+                                    <a href="{$cp}/auth/">
                                         <!-- <span class="glyphicon glyphicon-user" aria-hidden="true"
                                             /> -->
                                         <xsl:text> Авторизация </xsl:text>

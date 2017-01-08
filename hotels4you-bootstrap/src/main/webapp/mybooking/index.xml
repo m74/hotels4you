@@ -8,8 +8,8 @@
 	
 	<script src="mybooking.js"/>
 	
-	<content>
+	<body>
 		<div id="main" class="container" />
-	</content>
+	</body>
 
 </document>

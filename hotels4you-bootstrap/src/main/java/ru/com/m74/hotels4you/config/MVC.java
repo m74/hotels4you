@@ -24,16 +24,12 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.xml.MappingJackson2XmlView;
 import ru.com.m74.hotels4you.view.MyXsltView;
 
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.URIResolver;
-
 /**
  * @author mixam
  * @since 15.06.16 23:58
  */
 @Configuration
-//@Order(1)
-@ComponentScan({"ru.com.m74.hotels4you.controller"})
+@ComponentScan({"ru.com.m74.hotels4you"})
 @EnableWebMvc
 public class MVC extends WebMvcConfigurerAdapter {
 
@@ -62,23 +58,21 @@ public class MVC extends WebMvcConfigurerAdapter {
     public void configureViewResolvers(ViewResolverRegistry registry) {
         super.configureViewResolvers(registry);
 
-        MyXsltView myXsltView = new MyXsltView();
-        myXsltView.setUriResolver(getUriResolver());
-        myXsltView.setTransformerFactory(getTransformerFactory());
-        myXsltView.setXmlMapper(getXmlMapper());
-
-
         MappingJackson2JsonView jsonView = new MappingJackson2JsonView(jsonMapper());
         jsonView.setPrettyPrint(true);
 
-        MappingJackson2XmlView xmlView = new MappingJackson2XmlView(getXmlMapper());
+        MappingJackson2XmlView xmlView = new MappingJackson2XmlView(xmlMapper());
         xmlView.setPrettyPrint(true);
 
-        registry.enableContentNegotiation(myXsltView, jsonView, xmlView);
+        registry.enableContentNegotiation(
+                new MyXsltView(xmlMapper()),
+                jsonView,
+                xmlView
+        );
     }
 
     @Bean
-    public XmlMapper getXmlMapper() {
+    public XmlMapper xmlMapper() {
         XmlFactory factory = new XmlFactory(new WstxInputFactory(), new WstxOutputFactory());
         XmlMapper mapper = new XmlMapper(factory);
         mapper.registerModule(new JaxbAnnotationModule());
@@ -86,18 +80,10 @@ public class MVC extends WebMvcConfigurerAdapter {
         return mapper;
     }
 
-    @Bean
-    public TransformerFactory getTransformerFactory() {
-        TransformerFactory tf = TransformerFactory.newInstance();
-        tf.setURIResolver(getUriResolver());
-        return tf;
-    }
-
-    @Bean
-    public URIResolver getUriResolver() {
-        return new mixam.dom4web.URIResolver(context.getServletContext());
-    }
-
+//    @Bean
+//    public TransformFilter transformFilter() {
+//        return new TransformFilter();
+//    }
 
 //    @Bean
 //    public XsltViewResolver xsltViewResolver() {

@@ -39,9 +39,15 @@ public class Starter implements WebApplicationInitializer {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
 
-        servletContext
-                .addFilter("springSecurityFilterChain", org.springframework.web.filter.DelegatingFilterProxy.class)
-                .addMappingForUrlPatterns(null, false, "/*");
+//        servletContext
+//                .addFilter("springSecurityFilterChain", org.springframework.web.filter.DelegatingFilterProxy.class)
+//                .addMappingForUrlPatterns(null, false, "/*");
 //        servletContext.addFilter("charset", CharacterEncodingFilter.class).addMappingForUrlPatterns(null, false, "/*");
+
+//        servletContext.addFilter("transformFilter", DelegatingFilterProxy.class)
+//                .addMappingForUrlPatterns(null, true, "/*");
+
+//        servletContext.addFilter("transformFilter", TestFilter.class)
+//                .addMappingForUrlPatterns(null, true, "/*");
     }
 }

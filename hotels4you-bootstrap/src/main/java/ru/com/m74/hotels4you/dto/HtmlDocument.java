@@ -1,7 +1,5 @@
 package ru.com.m74.hotels4you.dto;
 
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import javax.xml.bind.annotation.*;
 import java.util.HashMap;
 
@@ -21,7 +19,11 @@ public class HtmlDocument {
     private String stylesheet;
 
     @XmlAttribute
-    private boolean anonymousUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal().equals("anonymousUser");
+    private boolean anonymousUser;
+
+    public HtmlDocument() {
+//        anonymousUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal().equals("anonymousUser");
+    }
 
     public String getStylesheet() {
         return stylesheet;

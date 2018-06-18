@@ -204,6 +204,12 @@
         <!--<artifactId>format-currency</artifactId>-->
         <!--<version>0.0.1</version>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>ru.com.m74.webapp</groupId>
+            <artifactId>transform-fliter</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
